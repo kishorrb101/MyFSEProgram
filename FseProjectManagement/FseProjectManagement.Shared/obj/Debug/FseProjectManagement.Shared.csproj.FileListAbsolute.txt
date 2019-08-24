@@ -5,3 +5,9 @@ C:\Project\fse\Source\Latest\FseProjectManagement\FseProjectManagement.Shared\bi
 C:\Project\fse\Source\Latest\FseProjectManagement\FseProjectManagement.Shared\obj\Debug\FseProjectManagement.Shared.dll
 C:\Project\fse\Source\Latest\FseProjectManagement\FseProjectManagement.Shared\obj\Debug\FseProjectManagement.Shared.pdb
 C:\Project\fse\Source\Latest\FseProjectManagement\FseProjectManagement.Shared\obj\Debug\FseProjectManagement.Shared.csprojResolveAssemblyReference.cache
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\bin\Debug\FseProjectManagement.Shared.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\bin\Debug\FseProjectManagement.Shared.pdb
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\bin\Debug\Newtonsoft.Json.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\bin\Debug\Newtonsoft.Json.xml
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\obj\Debug\FseProjectManagement.Shared.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\obj\Debug\FseProjectManagement.Shared.pdb

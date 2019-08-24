@@ -1,18 +1,13 @@
-﻿using NBench;
+﻿using System;
+using FseProjectManagement.Shared.Helper;
+using FseProjectManagement.Web.Extensions.Models;
+using NBench;
 using NUnit.Framework;
-using ProjectManager.Api.Extension.DTO;
-using ProjectManager.SharedKernel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebApp;
 
 namespace FseProjectManagement.Web.Test
 {
     [TestFixture]
-    public class Miscellaneous_Test
+    public class MiscellaneousTest
     {
         [Test]
         [PerfBenchmark(NumberOfIterations = 500, RunMode = RunMode.Throughput,
@@ -20,10 +15,10 @@ namespace FseProjectManagement.Web.Test
         [ElapsedTimeAssertion(MaxTimeMilliseconds = 5000)]
         [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
         [TimingMeasurement]
-        public void Test_JsonObject()
+        public void JsonObject_Test()
         {
             //Arrange
-            var dto = new ProjectDto()
+            var dto = new ProjectModel()
             {
                 Name = "Test"
             };
@@ -41,7 +36,7 @@ namespace FseProjectManagement.Web.Test
         [ElapsedTimeAssertion(MaxTimeMilliseconds = 5000)]
         [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
         [TimingMeasurement]
-        public void Test_StringToJson()
+        public void StringToJson_Test()
         {
             //Arrange
             var str = @"{ 'id': 0, 'Name': 'Test'}";
@@ -78,7 +73,7 @@ namespace FseProjectManagement.Web.Test
         [ElapsedTimeAssertion(MaxTimeMilliseconds = 5000)]
         [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
         [TimingMeasurement]
-        public void Test_InvalidDateFromDate()
+        public void InvalidDateFromDate_Test()
         {
             //Arrange
             DateTime? invaliDate = null;
@@ -96,10 +91,10 @@ namespace FseProjectManagement.Web.Test
         [ElapsedTimeAssertion(MaxTimeMilliseconds = 5000)]
         [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
         [TimingMeasurement]
-        public void UserDto_DisplayName()
+        public void UserDisplayName_Test()
         {
             //Arrange
-            var userDto = new UserDto() {FirstName = "FirstName", LastName = "LastName" };
+            var userDto = new UserModel() {FirstName = "FirstName", LastName = "LastName" };
 
             //Assert
             Assert.AreEqual("FirstName LastName", userDto.DisplayName);

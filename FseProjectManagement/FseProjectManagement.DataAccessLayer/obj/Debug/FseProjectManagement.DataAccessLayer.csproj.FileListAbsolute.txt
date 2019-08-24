@@ -12,3 +12,17 @@ C:\Project\fse\Source\Latest\FseProjectManagement\FseProjectManagement.DataAcces
 C:\Project\fse\Source\Latest\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Project\fse\Source\Latest\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.dll
 C:\Project\fse\Source\Latest\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.pdb
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\FseProjectManagement.DataAccessLayer.dll.config
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\FseProjectManagement.DataAccessLayer.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\FseProjectManagement.DataAccessLayer.pdb
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\FseProjectManagement.Shared.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\FseProjectManagement.Shared.pdb
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.pdb
