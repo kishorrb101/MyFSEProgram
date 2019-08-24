@@ -33,7 +33,6 @@ C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.E
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\Newtonsoft.Json.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\nunit.framework.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\System.Net.Http.Formatting.dll
-C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\System.Web.Http.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\System.Web.Http.WebHost.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\EntityFramework.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\FseProjectManagement.DataAccessLayer.pdb
@@ -44,7 +43,6 @@ C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.E
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\nunit.framework.pdb
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\nunit.framework.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\System.Net.Http.Formatting.xml
-C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\System.Web.Http.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\System.Web.Http.WebHost.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\EntityFramework.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\obj\Debug\FseProjectManagement.Web.Extensions.csprojResolveAssemblyReference.cache
