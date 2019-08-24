@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 
 namespace FseProjectManagement.Web.Extensions.Models
 {
     public class ProjectModel
     {
+        [DataMember(Name = "id")]
         public int ProjectId { get; set; }
 
         [Required]
