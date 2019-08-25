@@ -10,7 +10,7 @@ namespace FseProjectManagement.Web.Extensions.Models
     public class ProjectModel
     {
         [DataMember(Name = "id")]
-        public int ProjectId { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }

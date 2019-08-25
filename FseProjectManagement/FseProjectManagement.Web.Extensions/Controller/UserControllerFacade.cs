@@ -92,7 +92,7 @@ namespace FseProjectManagement.Web.Extensions.Controller
         public List<UserModel> GetAll()
         {
             var usersList = _userRepository.GetAll()
-                                       .OrderByDescending(p => p.UserId);
+                                       .OrderByDescending(p => p.Id);
 
             var userModels = AutoMapper.Mapper.Map<List<UserModel>>(usersList);
 
@@ -110,7 +110,7 @@ namespace FseProjectManagement.Web.Extensions.Controller
             {
                 throw new InvalidOperationException("Either First Name or Last Name required");
             }
-            var userDetails = _userRepository.Get(UserModel.UserId);
+            var userDetails = _userRepository.Get(UserModel.Id);
             if (userDetails == null)
             {
                 //create user

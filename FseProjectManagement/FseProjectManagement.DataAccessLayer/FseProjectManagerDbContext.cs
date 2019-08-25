@@ -32,19 +32,19 @@ namespace FseProjectManagement.DataAccessLayer
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<UserDetails>()
-                .HasKey<int>(s => s.UserId);
+                .HasKey<int>(s => s.Id);
 
-            modelBuilder.Entity<ParentTaskDetails>().HasKey<int>(s => s.ParentTaskId);
+            modelBuilder.Entity<ParentTaskDetails>().HasKey<int>(s => s.Id);
 
             modelBuilder.Entity<TaskDetails>()
-                .HasKey<int>(s => s.TaskId)
+                .HasKey<int>(s => s.Id)
                 .HasOptional<ParentTaskDetails>(s => s.ParentTask)
                 .WithMany(p => p.Tasks)
                 .HasForeignKey<int?>(t => t.ParentTaskId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ProjectDetails>()
-              .HasKey<int>(s => s.ProjectId)
+              .HasKey<int>(s => s.Id)
               .HasRequired<UserDetails>(p => p.Manager)
               .WithMany(u => u.Projects)
               .HasForeignKey<int>(p => p.ManagerId)

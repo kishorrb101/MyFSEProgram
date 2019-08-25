@@ -89,11 +89,11 @@ namespace FseProjectManagement.Web.Test
             var testUsers = GetTestUsers();
 
             var mockUserRepository = new Mock<IUserDetailsRepository>().Object;
-            Mock.Get<IUserDetailsRepository>(mockUserRepository).Setup(r => r.Get(userIdToBeQueried)).Returns(testUsers.First(u => u.UserId == userIdToBeQueried));
+            Mock.Get<IUserDetailsRepository>(mockUserRepository).Setup(r => r.Get(userIdToBeQueried)).Returns(testUsers.First(u => u.Id == userIdToBeQueried));
 
             var userFacade = new UserControllerFacade(mockUserRepository);
             var userController = new UserController(userFacade);
-            var expectetUser = testUsers.First(u => u.UserId == userIdToBeQueried);
+            var expectetUser = testUsers.First(u => u.Id == userIdToBeQueried);
 
             //act
             var result = userController.GetUserDetails(userIdToBeQueried) as OkNegotiatedContentResult<UserModel>;
@@ -190,12 +190,12 @@ namespace FseProjectManagement.Web.Test
             var testUsers = GetTestUsers();
             var userModelToBeUpdated = new UserModel()
             {
-                UserId = 5,
+                Id = 5,
                 EmployeeId = "Mocker_Employee"
             };
 
             var mockUserRepository = new Mock<IUserDetailsRepository>().Object;
-            Mock.Get<IUserDetailsRepository>(mockUserRepository).Setup(r => r.Get(userModelToBeUpdated.UserId));
+            Mock.Get<IUserDetailsRepository>(mockUserRepository).Setup(r => r.Get(userModelToBeUpdated.Id));
 
             var userFacade = new UserControllerFacade(mockUserRepository);
             var userController = new UserController(userFacade);
@@ -219,16 +219,16 @@ namespace FseProjectManagement.Web.Test
             var testUsers = GetTestUsers();
             var userModelToBeUpdated = new UserModel()
             {
-                UserId = 4,
+                Id = 4,
                 FirstName = "First Name Mocked",
                 LastName = "Last Name_Mocked",
                 EmployeeId = "Employee Mocker"
             };
 
-            var oldUser = testUsers.First(u => u.UserId == userModelToBeUpdated.UserId);
+            var oldUser = testUsers.First(u => u.Id == userModelToBeUpdated.Id);
 
             var mockUserRepository = new Mock<IUserDetailsRepository>().Object;
-            Mock.Get<IUserDetailsRepository>(mockUserRepository).Setup(r => r.Get(userModelToBeUpdated.UserId)).Returns(oldUser);
+            Mock.Get<IUserDetailsRepository>(mockUserRepository).Setup(r => r.Get(userModelToBeUpdated.Id)).Returns(oldUser);
 
             var userFacade = new UserControllerFacade(mockUserRepository);
             var userController = new UserController(userFacade);
@@ -275,7 +275,7 @@ namespace FseProjectManagement.Web.Test
             var testUsers = GetTestUsers();
             var userIdToBDeleted = 4;
 
-            var user = testUsers.First(u => u.UserId == userIdToBDeleted);
+            var user = testUsers.First(u => u.Id == userIdToBDeleted);
 
             var mockUserRepository = new Mock<IUserDetailsRepository>().Object;
             Mock.Get<IUserDetailsRepository>(mockUserRepository).Setup(r => r.Get(userIdToBDeleted)).Returns(user);
@@ -324,16 +324,16 @@ namespace FseProjectManagement.Web.Test
         public void Delete_ShouldNotDelete_WhenUserHasProjects()
         {
             //arrange
-            var userToBeDeleted = new UserDetails() { UserId = 4, Projects = new List<ProjectDetails>() { new ProjectDetails() { ProjectId = 1 } } };
+            var userToBeDeleted = new UserDetails() { Id = 4, Projects = new List<ProjectDetails>() { new ProjectDetails() { Id = 1 } } };
 
             var mockUserRepository = new Mock<IUserDetailsRepository>().Object;
-            Mock.Get<IUserDetailsRepository>(mockUserRepository).Setup(r => r.Get(userToBeDeleted.UserId)).Returns(userToBeDeleted);
+            Mock.Get<IUserDetailsRepository>(mockUserRepository).Setup(r => r.Get(userToBeDeleted.Id)).Returns(userToBeDeleted);
 
             var userFacade = new UserControllerFacade(mockUserRepository);
             var projectController = new UserController(userFacade);
 
             //act
-            var result = projectController.DeleteUser(userToBeDeleted.UserId) as OkNegotiatedContentResult<bool>;
+            var result = projectController.DeleteUser(userToBeDeleted.Id) as OkNegotiatedContentResult<bool>;
 
             //assert
             Assert.Null(result);
@@ -348,16 +348,16 @@ namespace FseProjectManagement.Web.Test
         public void Delete_ShouldNotDelete_WhenUserHasTasks()
         {
             //arrange
-            var userToBeDeleted = new UserDetails() { UserId = 4, Tasks = new List<TaskDetails>() { new TaskDetails() { TaskId = 1 } } };
+            var userToBeDeleted = new UserDetails() { Id = 4, Tasks = new List<TaskDetails>() { new TaskDetails() { Id = 1 } } };
 
             var mockUserRepository = new Mock<IUserDetailsRepository>().Object;
-            Mock.Get<IUserDetailsRepository>(mockUserRepository).Setup(r => r.Get(userToBeDeleted.UserId)).Returns(userToBeDeleted);
+            Mock.Get<IUserDetailsRepository>(mockUserRepository).Setup(r => r.Get(userToBeDeleted.Id)).Returns(userToBeDeleted);
 
             var userFacade = new UserControllerFacade(mockUserRepository);
             var projectController = new UserController(userFacade);
 
             //act
-            var result = projectController.DeleteUser(userToBeDeleted.UserId) as OkNegotiatedContentResult<bool>;
+            var result = projectController.DeleteUser(userToBeDeleted.Id) as OkNegotiatedContentResult<bool>;
 
             //assert
             Assert.Null(result);
@@ -367,12 +367,12 @@ namespace FseProjectManagement.Web.Test
         {
             var testUsers = new List<UserDetails>
             {
-            new UserDetails{UserId = 1, FirstName="First Name 1",LastName="Last Name 1", EmployeeId = "1" },
-            new UserDetails{UserId = 2, FirstName="First Name 2",LastName="Last Name 2", EmployeeId = "2"},
-            new UserDetails{UserId = 3, FirstName="First Name 3",LastName="Last Name 3" ,EmployeeId = "3"},
-            new UserDetails{UserId = 4, FirstName="First Name 4",LastName="Last Name 4" ,EmployeeId = "4"},
-            new UserDetails{UserId = 5, FirstName="First Name 5",LastName="Last Name 5" ,EmployeeId = "5"},
-            new UserDetails{UserId = 6, FirstName="First Name 6",LastName="Last Name 6" ,EmployeeId = "6"},
+            new UserDetails{Id = 1, FirstName="First Name 1",LastName="Last Name 1", EmployeeId = "1" },
+            new UserDetails{Id = 2, FirstName="First Name 2",LastName="Last Name 2", EmployeeId = "2"},
+            new UserDetails{Id = 3, FirstName="First Name 3",LastName="Last Name 3" ,EmployeeId = "3"},
+            new UserDetails{Id = 4, FirstName="First Name 4",LastName="Last Name 4" ,EmployeeId = "4"},
+            new UserDetails{Id = 5, FirstName="First Name 5",LastName="Last Name 5" ,EmployeeId = "5"},
+            new UserDetails{Id = 6, FirstName="First Name 6",LastName="Last Name 6" ,EmployeeId = "6"},
             };
 
             return testUsers.AsQueryable();

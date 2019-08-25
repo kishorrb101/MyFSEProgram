@@ -10,7 +10,7 @@ namespace FseProjectManagement.Web.Extensions.Models
     public class TaskModel
     {
         [DataMember(Name = "id")]
-        public int TaskId { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }

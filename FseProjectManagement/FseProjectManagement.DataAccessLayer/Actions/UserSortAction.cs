@@ -19,11 +19,11 @@ namespace FseProjectManagement.DataAccessLayer.Actions
                     case "id":
                         if (sort.Direction == SortDirection.ASC)
                         {
-                            query = query.OrderBy(p => p.UserId);
+                            query = query.OrderBy(p => p.Id);
                         }
                         else
                         {
-                            query = query.OrderByDescending(p => p.UserId);
+                            query = query.OrderByDescending(p => p.Id);
                         }
 
                         break;

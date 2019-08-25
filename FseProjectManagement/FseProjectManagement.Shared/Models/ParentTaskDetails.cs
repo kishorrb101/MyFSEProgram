@@ -9,7 +9,7 @@ namespace FseProjectManagement.Shared.Models
         {
             this.Tasks = new HashSet<TaskDetails>();
         }
-        public int ParentTaskId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public virtual ICollection<TaskDetails> Tasks { get; set; }

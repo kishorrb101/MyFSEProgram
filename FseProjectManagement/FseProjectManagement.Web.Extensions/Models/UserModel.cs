@@ -11,7 +11,7 @@ namespace FseProjectManagement.Web.Extensions.Models
     public class UserModel
     {
         [DataMember(Name = "id")]
-        public int UserId { get; set; }
+        public int Id { get; set; }
 
         public string FirstName { get; set; }
 

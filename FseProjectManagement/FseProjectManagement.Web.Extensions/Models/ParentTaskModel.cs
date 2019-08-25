@@ -10,7 +10,7 @@ namespace FseProjectManagement.Web.Extensions.Models
     public class ParentTaskModel
     {
         [DataMember(Name = "id")]
-        public int ParentTaskId { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }

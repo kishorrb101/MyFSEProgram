@@ -12,7 +12,7 @@ namespace FseProjectManagement.Shared.Models
             this.Tasks = new HashSet<TaskDetails>();
             this.Projects = new HashSet<ProjectDetails>();
         }
-        public int UserId { get; set; }
+        public int Id { get; set; }
 
         public string FirstName { get; set; }
 

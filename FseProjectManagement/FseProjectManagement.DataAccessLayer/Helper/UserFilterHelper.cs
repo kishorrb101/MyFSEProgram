@@ -29,7 +29,7 @@ namespace FseProjectManagement.DataAccessLayer.Helper
                     case "id":
                         if (filter.FilterOperator == FilterCriteriaDescriptor.EqualTo)
                         {
-                            query = query.Where(q => q.UserId.ToString().ToLower() == filter.Value.ToString().ToLower());
+                            query = query.Where(q => q.Id.ToString().ToLower() == filter.Value.ToString().ToLower());
                         }
                         else throw new NotImplementedException("Operator not handled");
                         break;
