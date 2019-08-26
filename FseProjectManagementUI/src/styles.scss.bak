@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+
+//== Vendor
+@import '~@fortawesome/fontawesome-free-webfonts/css/fa-brands.css';
+@import '~@fortawesome/fontawesome-free-webfonts/css/fa-regular.css';
+@import '~@fortawesome/fontawesome-free-webfonts/css/fa-solid.css';
+@import '~@fortawesome/fontawesome-free-webfonts/css/fontawesome.css';
+@import '~font-awesome/css/font-awesome.css';
+@import '~simple-line-icons/css/simple-line-icons.css';
+//== Bootstrap
+@import "./app/shared/styles/bootstrap.scss";
+//== Application
+@import "./app/shared/styles/app.scss";
+// kendo-ui styles.scss
+@import "~@progress/kendo-theme-default/scss/all";
+// application styles
+@import "./app/shared/styles/bootstrap/_functions.scss";
+@import "./app/shared/styles/bootstrap/_variables.scss";
+@import "./app/shared/styles/bootstrap/_mixins";
+@import './app/shared/styles/app/variables.scss';
+
+.max-lg-container {
+  margin: 0 auto;
+  max-width: map-get($container-max-widths, "lg");
+}
+
+.content-section.introduction {
+  background-image: linear-gradient(to left, #2bc0ec, #1b81d7);
+  color: #fff;
+}
+
+.content-section {
+  display: block;
+  padding: 30px;
+  overflow: hidden;
+  background-color: #f5f7f8;
+}
+
+.content-section:first-of-type>div>span {
+  line-height: 1.5em;
+}
+
+.feature-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+body {
+  line-height: 1.4 !important;
+}
+
+input.ng-invalid {
+  border-color: red
+}
+
+select.ng-invalid {
+  border-color: red
+}
+
+p-autocomplete.ng-invalid>span>input {
+  border-color: red
+}
+
+p-dropdown.ng-invalid>div>label {
+  border-color: red
+}

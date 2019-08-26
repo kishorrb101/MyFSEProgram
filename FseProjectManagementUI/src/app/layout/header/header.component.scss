@@ -1,0 +1,27 @@
+.navbar-brand{  
+    cursor: pointer;  
+    outline:none;  
+    font-weight:700;  
+    font-style:italic;  
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0.5rem 1rem; */
+}
+
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+    content: "\f0c9";
+    color:white;
+}
+
+.sidebar-toggle {
+    /* position: absolute !important; */
+    top: 2px;
+    left: 0;
+    z-index: 3001;
+}

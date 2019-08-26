@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+div.card-header {
+  font-size: large;
+}
+
+div.card {
+  margin-top: 10px
+}
+
+.table {
+  margin-top: 10px
+}
+
+.content-section.introduction {
+  background-image: linear-gradient(to left, #2bc0ec, #1b81d7);
+  color: #fff;
+}
+
+.content-section {
+  display: block;
+  padding: 30px;
+  overflow: hidden;
+  background-color: #f5f7f8;
+}
+
+.content-section:first-of-type>div>span {
+  line-height: 1.5em;
+}
+
+.feature-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+body {
+  line-height: 1.4 !important;
+}
+
+input.ng-invalid:not(#login_username):not(#login_password) {
+  border-color: red
+}
+
+select.ng-invalid {
+  border-color: red
+}
+
+p-autocomplete.ng-invalid>span>input {
+  border-color: red
+}
+
+p-dropdown.ng-invalid>div>label {
+  border-color: red
+}
+
+.code-label {
+  color: #FF3383 !important;
+  font-weight: bolder;
+}
+
+a.link-button:hover {
+  text-decoration: underline !important;
+  cursor: hand;
+}
+
+.negative-curr {
+  color: crimson
+}
+
+.positive-curr {
+  color: blue
+}
+
+
