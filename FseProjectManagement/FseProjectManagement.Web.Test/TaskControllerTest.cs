@@ -380,14 +380,13 @@ namespace FseProjectManagement.Web.Test
             var TaskDtoToBeUpdated = new TaskModel()
             {
                 Id = 4,
-                Name = "Task_5_updated",
+                Name = "Task_4_updated",
                 StartDate = "20190101",
                 EndDate = "20210901",
                 Priority = 1,
                 OwnerId = 2,
                 ProjectId = 1,
-                ParentTaskId = 1,
-                StatusId = 2
+                ParentTaskId = 1
             };
 
             var testTasks = GetTestTaskDetails();
