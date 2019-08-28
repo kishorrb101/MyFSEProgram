@@ -180,6 +180,8 @@ C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\b
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\Microsoft.AI.WindowsServer.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\Microsoft.AI.Web.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\EntityFramework.xml
-C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.csprojResolveAssemblyReference.cache
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.pdb
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.csprojAssemblyReference.cache
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.csproj.CoreCompileInputs.cache
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.csproj.CopyComplete

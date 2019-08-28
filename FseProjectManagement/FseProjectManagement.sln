@@ -19,6 +19,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FseProjectManagement.Shared
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FseProjectManagement.Web.Test", "FseProjectManagement.Web.Test\FseProjectManagement.Web.Test.csproj", "{8D6939AB-3A8C-4D9C-BA10-FAC2EF685B0D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LoadRunTest", "LoadRunTest", "{CAEA4995-46CA-4C67-BD22-6ACE1F7949CF}"
+	ProjectSection(SolutionItems) = preProject
+		loadRunNBench.bat = loadRunNBench.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestCoverage", "TestCoverage", "{22721D64-6850-46CD-B148-C3DBD697B350}"
+	ProjectSection(SolutionItems) = preProject
+		runtestcover.bat = runtestcover.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,5 +63,9 @@ Global
 		{6326F61E-C480-4772-B4AD-0F7CAC33648B} = {DA9E9B4B-730D-4CB9-89F0-236AE033D4FF}
 		{A86871DF-A77A-4B53-9ABD-D2612899B1A2} = {B5B0660C-E945-401A-B714-BDBAA7AC51D7}
 		{8D6939AB-3A8C-4D9C-BA10-FAC2EF685B0D} = {7344DDC4-EBB6-4DA1-8EB6-A240CEECE754}
+		{22721D64-6850-46CD-B148-C3DBD697B350} = {7344DDC4-EBB6-4DA1-8EB6-A240CEECE754}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69A1D85E-44F9-42D6-907E-D22E34C06FBC}
 	EndGlobalSection
 EndGlobal

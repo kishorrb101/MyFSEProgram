@@ -278,6 +278,44 @@ namespace FseProjectManagement.Web.Test
         [ElapsedTimeAssertion(MaxTimeMilliseconds = 5000)]
         [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
         [TimingMeasurement]
+        public void Update_ShouldUpdate_To_CorrectTask_Test()
+        {
+            //arrange
+            var testTasks = GetTestTaskDetails();
+            var TaskDtoToBeUpdated = new TaskModel()
+            {
+                Id = 1,
+                Name = "Task_3_updated",
+                StartDate = "20190201",
+                EndDate = "20210901",
+                Priority = 1,
+                OwnerId = 2,
+                ProjectId = 1,
+                ParentTaskId = 1
+            };
+
+            var oldTask = testTasks.First(u => u.Id == TaskDtoToBeUpdated.Id);
+
+            var mockTaskRepository = new Mock<ITaskDetailsRepository>().Object;
+            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskDtoToBeUpdated.Id)).Returns(oldTask);
+
+            var taskControllerFacade = new TaskControllerFacade(mockTaskRepository);
+            var taskController = new TaskController(taskControllerFacade);
+
+            //act
+            var result = taskController.Update(TaskDtoToBeUpdated) as OkNegotiatedContentResult<TaskModel>;
+
+            //assert
+            Assert.AreEqual(TaskDtoToBeUpdated.Name, result.Content.Name);
+            Assert.AreEqual(TaskDtoToBeUpdated.Priority, result.Content.Priority);
+        }
+
+        [Test]
+        [PerfBenchmark(NumberOfIterations = 500, RunMode = RunMode.Throughput,
+            TestMode = TestMode.Test, SkipWarmups = true, RunTimeMilliseconds = 6000)]
+        [ElapsedTimeAssertion(MaxTimeMilliseconds = 5000)]
+        [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
+        [TimingMeasurement]
         public void Delete_ShouldNotDeleteWhenNoTaskFound_Test()
         {
             //arrange

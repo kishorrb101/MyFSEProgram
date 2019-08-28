@@ -107,33 +107,6 @@ namespace FseProjectManagement.Web.Test
         [ElapsedTimeAssertion(MaxTimeMilliseconds = 5000)]
         [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
         [TimingMeasurement]
-        public void QueryProjects_ShouldReturnTaskWithPriorityGreater_ThanAndEqualToZero_Test()
-        {
-            //arrange
-            var testProjects = GetTestProjectsDetails().Where(p=>p.Priority>=0);
-            var queryResult = new FilterReturnResult<ProjectDetails>() { Data = testProjects, Total = testProjects.Count() };
-            var mockProjectRepository = new Mock<IProjectDetailsRepository>().Object;
-            Mock.Get<IProjectDetailsRepository>(mockProjectRepository).Setup(r => r.Query(It.IsAny<FilterConditions>())).Returns(queryResult);
-
-            var projectFacade = new ProjectControllerFacade(mockProjectRepository);
-            var projectController = new ProjectController(projectFacade);
-            var thisAssembly = Assembly.GetExecutingAssembly();
-            var jsonFilePath = Path.Combine(Directory.GetParent(thisAssembly.Location).FullName, @"TestData\FilerStat.Json");
-            var fileStatString = File.ReadAllText(jsonFilePath);
-            var filterState = fileStatString.ToObject<FilterConditions>();
-
-            var result = projectController.Query(filterState) as OkNegotiatedContentResult<FilterReturnResult<ProjectModel>>;
-
-            //assert
-            Assert.True(result.Content.Data.All(t => t.Priority >= 0));
-        }
-
-        [Test]
-        [PerfBenchmark(NumberOfIterations = 500, RunMode = RunMode.Throughput,
-            TestMode = TestMode.Test, SkipWarmups = true, RunTimeMilliseconds = 6000)]
-        [ElapsedTimeAssertion(MaxTimeMilliseconds = 5000)]
-        [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
-        [TimingMeasurement]
         public void GetProject_ShouldReturn_CorrectProject_Test()
         {
             //arrange
@@ -452,6 +425,70 @@ namespace FseProjectManagement.Web.Test
             //assert
             Assert.True(result.Content);
         }
+
+        [Test]
+        [PerfBenchmark(NumberOfIterations = 500, RunMode = RunMode.Throughput,
+            TestMode = TestMode.Test, SkipWarmups = true, RunTimeMilliseconds = 6000)]
+        [ElapsedTimeAssertion(MaxTimeMilliseconds = 5000)]
+        [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
+        [TimingMeasurement]
+        public void UpdateProjectState_ForExistingWhenProjectAlready_Test()
+        {
+            //arrange
+            var testProjects = GetTestProjectsDetails();
+            var projectDtoToBeUpdated = new ProjectModel()
+            {
+                Id = 2,
+                Name = "Project_2_updated",
+                StartDate = "20190101",
+                EndDate = "20210801",
+                Priority = 2,
+                IsSuspended = false,
+                ManagerId = 2
+            };
+
+            var oldProject = testProjects.First(u => u.Id == projectDtoToBeUpdated.Id);
+
+            var mockProjectRepository = new Mock<IProjectDetailsRepository>().Object;
+            Mock.Get<IProjectDetailsRepository>(mockProjectRepository).Setup(r => r.Get(projectDtoToBeUpdated.Id)).Returns(oldProject);
+
+            var projectFacade = new ProjectControllerFacade(mockProjectRepository);
+            var projectController = new ProjectController(projectFacade);
+
+            //act
+            var result = projectController.UpdateProjectState(projectDtoToBeUpdated) as OkNegotiatedContentResult<bool>;
+
+            //assert
+            //assert
+            Assert.AreEqual(null, result);
+        }
+        [Test]
+        [PerfBenchmark(NumberOfIterations = 500, RunMode = RunMode.Throughput,
+            TestMode = TestMode.Test, SkipWarmups = true, RunTimeMilliseconds = 6000)]
+        [ElapsedTimeAssertion(MaxTimeMilliseconds = 5000)]
+        [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
+        [TimingMeasurement]
+        public void QueryProjects_ShouldReturnTaskWithPriorityGreater_ThanAndEqualToZero_Test()
+        {
+            //arrange
+            var testProjects = GetTestProjectsDetails().Where(p => p.Priority >= 0);
+            var queryResult = new FilterReturnResult<ProjectDetails>() { Data = testProjects, Total = testProjects.Count() };
+            var mockProjectRepository = new Mock<IProjectDetailsRepository>().Object;
+            Mock.Get<IProjectDetailsRepository>(mockProjectRepository).Setup(r => r.Query(It.IsAny<FilterConditions>())).Returns(queryResult);
+
+            var projectFacade = new ProjectControllerFacade(mockProjectRepository);
+            var projectController = new ProjectController(projectFacade);
+            var thisAssembly = Assembly.GetExecutingAssembly();
+            var jsonFilePath = Path.Combine(Directory.GetParent(thisAssembly.Location).FullName, @"Assets\FilerStat.Json");
+            var fileStatString = File.ReadAllText(jsonFilePath);
+            var filterState = fileStatString.ToObject<FilterConditions>();
+
+            var result = projectController.Query(filterState) as OkNegotiatedContentResult<FilterReturnResult<ProjectModel>>;
+
+            //assert
+            Assert.True(result.Content.Data.All(t => t.Priority >= 0));
+        }
+
 
         private IQueryable<ProjectDetails> GetTestProjectsDetails()
         {

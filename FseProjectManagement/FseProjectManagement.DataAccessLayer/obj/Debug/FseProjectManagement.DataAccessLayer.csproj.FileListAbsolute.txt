@@ -23,6 +23,8 @@ C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataA
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\EntityFramework.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\bin\Debug\Newtonsoft.Json.xml
-C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.pdb
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.csprojAssemblyReference.cache
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.DataAccessLayer\obj\Debug\FseProjectManagement.DataAccessLayer.csproj.CopyComplete
