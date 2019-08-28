@@ -11,3 +11,6 @@ C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Share
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\bin\Debug\Newtonsoft.Json.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\obj\Debug\FseProjectManagement.Shared.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\obj\Debug\FseProjectManagement.Shared.pdb
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\obj\Debug\FseProjectManagement.Shared.csprojAssemblyReference.cache
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\obj\Debug\FseProjectManagement.Shared.csproj.CoreCompileInputs.cache
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Shared\obj\Debug\FseProjectManagement.Shared.csproj.CopyComplete

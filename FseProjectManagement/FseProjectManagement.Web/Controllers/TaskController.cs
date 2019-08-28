@@ -91,7 +91,7 @@ namespace FseProjectManagement.Web.Controllers
         {
             return Try(() =>
             {
-                return Ok(_taskFacade.UpdateTaskState(task.ProjectId, task.StatusId));
+                return Ok(_taskFacade.UpdateTaskState(task.Id, task.StatusId));
             });
         }
     }

@@ -51,6 +51,8 @@
     <Compile Include="Actions\ProjectSortAction.cs" />
     <Compile Include="Actions\TaskSortAction.cs" />
     <Compile Include="Actions\UserSortAction.cs" />
+    <Compile Include="DataFeed\ProjectManagerInitializer.cs" />
+    <Compile Include="DataFeed\Configuration.cs" />
     <Compile Include="FseProjectManagerDbContext.cs" />
     <Compile Include="Helper\Class1.cs" />
     <Compile Include="Helper\ProjectFilterHelper.cs" />

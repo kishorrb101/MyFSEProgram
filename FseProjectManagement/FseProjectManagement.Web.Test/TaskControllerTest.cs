@@ -113,11 +113,11 @@ namespace FseProjectManagement.Web.Test
             var testTasks = GetTestTaskDetails();
 
             var mockTaskRepository = new Mock<ITaskDetailsRepository>().Object;
-            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskIdToBeQueried)).Returns(testTasks.First(u=>u.TaskId == TaskIdToBeQueried));
+            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskIdToBeQueried)).Returns(testTasks.First(u=>u.Id == TaskIdToBeQueried));
 
             var taskControllerFacade = new TaskControllerFacade(mockTaskRepository);
             var taskController = new TaskController(taskControllerFacade);
-            var expectetTask = testTasks.First(u => u.TaskId == TaskIdToBeQueried);
+            var expectetTask = testTasks.First(u => u.Id == TaskIdToBeQueried);
 
             //act
             var result = taskController.GetTask(TaskIdToBeQueried) as OkNegotiatedContentResult<TaskModel>;
@@ -181,7 +181,7 @@ namespace FseProjectManagement.Web.Test
             //arrange
             var testTasks = GetTestTaskDetails();
             var newTaskDto = new TaskModel() {
-                TaskId = 1,
+                Id = 1,
                 Name = "Task_5",
                 StartDate = "20190101",
                 EndDate = "20210901",
@@ -218,7 +218,7 @@ namespace FseProjectManagement.Web.Test
             var testTasks = GetTestTaskDetails();
             var TaskDtoToBeUpdated = new TaskModel()
             {
-                TaskId = 4,
+                Id = 4,
                 Name = "Task_4_updated",
                 StartDate = "20190101",
                 EndDate = "20210901",
@@ -228,10 +228,10 @@ namespace FseProjectManagement.Web.Test
                 ParentTaskId = 1
             };
 
-            var oldTask = testTasks.First(u => u.TaskId == TaskDtoToBeUpdated.TaskId);
+            var oldTask = testTasks.First(u => u.Id == TaskDtoToBeUpdated.Id);
 
             var mockTaskRepository = new Mock<ITaskDetailsRepository>().Object;
-            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskDtoToBeUpdated.TaskId)).Returns(oldTask);
+            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskDtoToBeUpdated.Id)).Returns(oldTask);
 
             var taskControllerFacade = new TaskControllerFacade(mockTaskRepository);
             var taskController = new TaskController(taskControllerFacade);
@@ -256,7 +256,7 @@ namespace FseProjectManagement.Web.Test
             var testTasks = GetTestTaskDetails();
             var TaskIdToBDeleted = 4;
 
-            var task = testTasks.First(u => u.TaskId == TaskIdToBDeleted);
+            var task = testTasks.First(u => u.Id == TaskIdToBDeleted);
 
             var mockTaskRepository = new Mock<ITaskDetailsRepository>().Object;
             Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskIdToBDeleted)).Returns(task);
@@ -270,6 +270,44 @@ namespace FseProjectManagement.Web.Test
 
             //assert
             Assert.True(result.Content); 
+        }
+
+        [Test]
+        [PerfBenchmark(NumberOfIterations = 500, RunMode = RunMode.Throughput,
+            TestMode = TestMode.Test, SkipWarmups = true, RunTimeMilliseconds = 6000)]
+        [ElapsedTimeAssertion(MaxTimeMilliseconds = 5000)]
+        [MemoryMeasurement(MemoryMetric.TotalBytesAllocated)]
+        [TimingMeasurement]
+        public void Update_ShouldUpdate_To_CorrectTask_Test()
+        {
+            //arrange
+            var testTasks = GetTestTaskDetails();
+            var TaskDtoToBeUpdated = new TaskModel()
+            {
+                Id = 1,
+                Name = "Task_3_updated",
+                StartDate = "20190201",
+                EndDate = "20210901",
+                Priority = 1,
+                OwnerId = 2,
+                ProjectId = 1,
+                ParentTaskId = 1
+            };
+
+            var oldTask = testTasks.First(u => u.Id == TaskDtoToBeUpdated.Id);
+
+            var mockTaskRepository = new Mock<ITaskDetailsRepository>().Object;
+            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskDtoToBeUpdated.Id)).Returns(oldTask);
+
+            var taskControllerFacade = new TaskControllerFacade(mockTaskRepository);
+            var taskController = new TaskController(taskControllerFacade);
+
+            //act
+            var result = taskController.Update(TaskDtoToBeUpdated) as OkNegotiatedContentResult<TaskModel>;
+
+            //assert
+            Assert.AreEqual(TaskDtoToBeUpdated.Name, result.Content.Name);
+            Assert.AreEqual(TaskDtoToBeUpdated.Priority, result.Content.Priority);
         }
 
         [Test]
@@ -307,7 +345,7 @@ namespace FseProjectManagement.Web.Test
             //arrange  
             var TaskDtoToBeUpdated = new TaskModel()
             {
-                TaskId = -1,
+                Id = -1,
                 Name = "Task_4_updated",
                 StartDate = "20190101",
                 EndDate = "20210901",
@@ -318,7 +356,7 @@ namespace FseProjectManagement.Web.Test
             };
 
             var mockTaskRepository = new Mock<ITaskDetailsRepository>().Object;
-            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskDtoToBeUpdated.TaskId));
+            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskDtoToBeUpdated.Id));
 
             var taskControllerFacade = new TaskControllerFacade(mockTaskRepository);
             var taskController = new TaskController(taskControllerFacade);
@@ -341,7 +379,7 @@ namespace FseProjectManagement.Web.Test
             //arrange  
             var TaskDtoToBeUpdated = new TaskModel()
             {
-                TaskId = 1,
+                Id = 1,
                 Name = "Task_4_updated",
                 StartDate = "20190101",
                 EndDate = "20210901",
@@ -353,10 +391,10 @@ namespace FseProjectManagement.Web.Test
             };
 
             var testTasks = GetTestTaskDetails();
-            var oldTask = testTasks.First(u => u.TaskId == TaskDtoToBeUpdated.TaskId);
+            var oldTask = testTasks.First(u => u.Id == TaskDtoToBeUpdated.Id);
 
             var mockTaskRepository = new Mock<ITaskDetailsRepository>().Object;
-            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskDtoToBeUpdated.TaskId)).Returns(oldTask);
+            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskDtoToBeUpdated.Id)).Returns(oldTask);
 
             var taskControllerFacade = new TaskControllerFacade(mockTaskRepository);
             var taskController = new TaskController(taskControllerFacade);
@@ -379,22 +417,21 @@ namespace FseProjectManagement.Web.Test
             //arrange  
             var TaskDtoToBeUpdated = new TaskModel()
             {
-                TaskId = 4,
-                Name = "Task_5_updated",
+                Id = 4,
+                Name = "Task_4_updated",
                 StartDate = "20190101",
                 EndDate = "20210901",
                 Priority = 1,
                 OwnerId = 2,
                 ProjectId = 1,
-                ParentTaskId = 1,
-                StatusId = 2
+                ParentTaskId = 1
             };
 
             var testTasks = GetTestTaskDetails();
-            var oldTask = testTasks.First(u => u.TaskId == TaskDtoToBeUpdated.TaskId);
+            var oldTask = testTasks.First(u => u.Id == TaskDtoToBeUpdated.Id);
 
             var mockTaskRepository = new Mock<ITaskDetailsRepository>().Object;
-            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskDtoToBeUpdated.TaskId)).Returns(oldTask);
+            Mock.Get<ITaskDetailsRepository>(mockTaskRepository).Setup(r => r.Get(TaskDtoToBeUpdated.Id)).Returns(oldTask);
 
             var taskControllerFacade = new TaskControllerFacade(mockTaskRepository);
             var taskController = new TaskController(taskControllerFacade);
@@ -411,12 +448,12 @@ namespace FseProjectManagement.Web.Test
         {
             var testTasks = new List<TaskDetails>
             {
-            new TaskDetails { TaskId = 1, Name = "Task 1",  StartDate = DateTime.Parse("2019-01-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 1 , OwnerId = 2, ProjectId = 1, ParentTaskId = 1, StatusId = 2},
-            new TaskDetails { TaskId = 2, Name = "Task 2",  StartDate = DateTime.Parse("2019-02-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 2 , OwnerId = 2, ProjectId = 2, ParentTaskId = 1, StatusId = 2},
-            new TaskDetails { TaskId = 2, Name = "Task 3",  StartDate = DateTime.Parse("2019-03-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 3 , OwnerId = 3, ProjectId = 3, ParentTaskId = 1, StatusId = 2 },
-            new TaskDetails { TaskId = 4, Name = "Task 4",  StartDate = DateTime.Parse("2019-04-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 4 , OwnerId = 4, ProjectId = 4, ParentTaskId = 1, StatusId = 2 },
-            new TaskDetails { TaskId = 2, Name = "Task 5",  StartDate = DateTime.Parse("2019-05-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 5 , OwnerId = 5, ProjectId = 5, ParentTaskId = 1, StatusId = 2 },
-            new TaskDetails { TaskId = 4, Name = "Task 6",  StartDate = DateTime.Parse("2019-06-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 6 , OwnerId = 6, ProjectId = 6, ParentTaskId = 1, StatusId = 2 },
+            new TaskDetails { Id = 1, Name = "Task 1",  StartDate = DateTime.Parse("2019-01-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 1 , OwnerId = 2, ProjectId = 1, ParentTaskId = 1, StatusId = 2},
+            new TaskDetails { Id = 2, Name = "Task 2",  StartDate = DateTime.Parse("2019-02-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 2 , OwnerId = 2, ProjectId = 2, ParentTaskId = 1, StatusId = 2},
+            new TaskDetails { Id = 2, Name = "Task 3",  StartDate = DateTime.Parse("2019-03-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 3 , OwnerId = 3, ProjectId = 3, ParentTaskId = 1, StatusId = 2 },
+            new TaskDetails { Id = 4, Name = "Task 4",  StartDate = DateTime.Parse("2019-04-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 4 , OwnerId = 4, ProjectId = 4, ParentTaskId = 1, StatusId = 2 },
+            new TaskDetails { Id = 2, Name = "Task 5",  StartDate = DateTime.Parse("2019-05-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 5 , OwnerId = 5, ProjectId = 5, ParentTaskId = 1, StatusId = 2 },
+            new TaskDetails { Id = 4, Name = "Task 6",  StartDate = DateTime.Parse("2019-06-01"), EndDate = DateTime.Parse("2021-09-01"), Priority = 6 , OwnerId = 6, ProjectId = 6, ParentTaskId = 1, StatusId = 2 },
             };
 
             return testTasks.AsQueryable();

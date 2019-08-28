@@ -89,7 +89,7 @@ namespace FseProjectManagement.Web.Extensions.Controller
         {
             var projects = _projectRepository.GetAll()
                                              .Where(p=>!p.IsSuspended)
-                                             .OrderByDescending(p=>p.ProjectId)
+                                             .OrderByDescending(p=>p.Id)
                                              .ToList();
 
             var projectDtos = AutoMapper.Mapper.Map<List<ProjectModel>>(projects);
@@ -104,7 +104,7 @@ namespace FseProjectManagement.Web.Extensions.Controller
         /// <returns></returns>
         public ProjectModel Update(ProjectModel projectModel)
         {
-            var project = _projectRepository.Get(projectModel.ProjectId);
+            var project = _projectRepository.Get(projectModel.Id);
             if (project == null)
             {
                 //create project

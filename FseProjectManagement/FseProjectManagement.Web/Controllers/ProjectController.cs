@@ -71,7 +71,7 @@ namespace FseProjectManagement.Web.Controllers
         {
             return Try(() =>
             {
-                return Ok(_projectFacade.UpdateProjectState(project.ProjectId, project.IsSuspended));
+                return Ok(_projectFacade.UpdateProjectState(project.Id, project.IsSuspended));
             });
         }
 

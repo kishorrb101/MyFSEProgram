@@ -83,7 +83,7 @@ namespace FseProjectManagement.Web.Extensions.Controller
         public List<TaskModel> GetAll()
         {
             var tasks = _taskRepository.GetAll()
-                                       .OrderByDescending(p => p.TaskId);
+                                       .OrderByDescending(p => p.Id);
 
             var taskDtos = AutoMapper.Mapper.Map<List<TaskModel>>(tasks);
 
@@ -97,7 +97,7 @@ namespace FseProjectManagement.Web.Extensions.Controller
         /// <returns></returns>
         public TaskModel Update(TaskModel taskModel)
         {
-            var task = _taskRepository.Get(taskModel.TaskId);
+            var task = _taskRepository.Get(taskModel.Id);
             if (task == null)
             {
                 //create task

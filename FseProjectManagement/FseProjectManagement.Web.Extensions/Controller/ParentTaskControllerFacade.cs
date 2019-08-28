@@ -43,7 +43,7 @@ namespace FseProjectManagement.Web.Extensions.Controller
         public List<ParentTaskModel> GetAll()
         {
             var parentTasks = _taskRepository.GetAll()
-                        .OrderByDescending(p => p.ParentTaskId);
+                        .OrderByDescending(p => p.Id);
             var taskDtos = AutoMapper.Mapper.Map<List<ParentTaskModel>>(parentTasks);
 
             return taskDtos;
@@ -56,7 +56,7 @@ namespace FseProjectManagement.Web.Extensions.Controller
         /// <returns></returns>
         public ParentTaskModel Update(ParentTaskModel parentTaskDto)
         {
-            var task = _taskRepository.Get(parentTaskDto.ParentTaskId);
+            var task = _taskRepository.Get(parentTaskDto.Id);
             if (task == null)
             {
                 //create Task

@@ -137,7 +137,9 @@ C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\b
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\nunit.framework.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\Serilog.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Net.Http.Formatting.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Cors.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Helpers.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Http.Cors.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Http.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Http.WebHost.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Mvc.dll
@@ -162,6 +164,7 @@ C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\b
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\Serilog.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Net.Http.Formatting.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Http.xml
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Http.Cors.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Http.WebHost.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\Newtonsoft.Json.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Helpers.xml
@@ -177,6 +180,8 @@ C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\b
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\Microsoft.AI.WindowsServer.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\Microsoft.AI.Web.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\EntityFramework.xml
-C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.csprojResolveAssemblyReference.cache
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.pdb
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.csprojAssemblyReference.cache
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.csproj.CoreCompileInputs.cache
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\obj\Debug\FseProjectManagement.Web.csproj.CopyComplete

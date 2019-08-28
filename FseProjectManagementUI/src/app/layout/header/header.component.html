@@ -1,0 +1,62 @@
+<!-- START Top Navbar-->
+
+
+
+<nav class="navbar navbar-light" style="background-color:#F1352B;">  
+
+ 
+  <div style="float: left;" >
+  <span style="float: left;" class="navbar-brand mb-0 h2 text-light" routerLink="/"><i class="fas fa-award"></i>FSE PMO</span>  
+  <span class="mr-auto"></span>  
+</div>
+  <!-- <button class="btn btn-info mr-2" routerLink="/about">User</button>  
+  <button class="btn btn-info" routerLink="/contact">Contact</button>   -->
+
+  <!-- <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+      <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+    </div> -->
+    <div style="float: right;" >
+    <ul class="navbar-nav  flex-row" style="cursor:pointer;color:white;">
+        <li class="nav-item" title="click to toggle side bar menu">
+     
+          <a class="nav-link d-none d-md-block d-lg-block d-xl-block" trigger-resize="" (click)="toggleCollapsedSidebar()"
+            *ngIf="!isCollapsedText()">
+            <em class="fas fa-bars"></em>
+          </a>
+        
+          <a class="nav-link sidebar-toggle d-md-none"
+            (click)="settings.toggleLayoutSetting('asideToggled'); $event.stopPropagation()">
+            <em class="fas fa-bars"></em>
+          </a>
+        </li>
+      </ul>
+    </div>
+</nav> 
+
+
+
+
+<!-- <nav class="navbar topnavbar" role="navigation">
+
+  <div class="navbar-header">
+    <a class="navbar-brand " [routerLink]="['/user']">
+      <div class="brand"> Project Manager</div>
+    </a>
+  </div>
+  <ul class="navbar-nav mr-auto flex-row" style="cursor:pointer">
+    <li class="nav-item" title="click to toggle side bar menu">
+ 
+      <a class="nav-link d-none d-md-block d-lg-block d-xl-block" trigger-resize="" (click)="toggleCollapsedSidebar()"
+        *ngIf="!isCollapsedText()">
+        <em class="fas fa-bars"></em>
+      </a>
+    
+      <a class="nav-link sidebar-toggle d-md-none"
+        (click)="settings.toggleLayoutSetting('asideToggled'); $event.stopPropagation()">
+        <em class="fas fa-bars"></em>
+      </a>
+    </li>
+  </ul>
+</nav> -->

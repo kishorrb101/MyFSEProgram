@@ -27,7 +27,7 @@ namespace DataAccess.Filters
                     case "id":
                         if (filter.FilterOperator == FilterCriteriaDescriptor.EqualTo)
                         {
-                            query = query.Where(q => q.TaskId.ToString().ToLower() == filter.Value.ToString().ToLower());
+                            query = query.Where(q => q.Id.ToString().ToLower() == filter.Value.ToString().ToLower());
                         }
                         else throw new NotImplementedException("Operator not handled");
                         break;
