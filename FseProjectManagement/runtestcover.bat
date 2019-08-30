@@ -13,7 +13,7 @@ REM   http://www.allenconway.net/2015/06/using-opencover-and-reportgenerator-to.
 REM  Andrew Newton - 
 REM   http://www.nootn.com.au/2014/01/code-coverage-with-opencover-example.html#.VxiNn_krLDc
 
-SET DllContainingTests=%~dp0Web.Api.Tests\bin\Debug\Web.Api.Tests.dll
+SET DllContainingTests=%~dp0FseProjectManagement.Web.Test\bin\Debug\FseProjectManagement.Web.Test.dll
 
 
 REM *** IMPORTANT - Change DllContainingTests variable (above) to point to the DLL 
@@ -66,7 +66,7 @@ REM *** to check for test coverage
 "%OpenCoverExe%" ^
  -target:"%TestRunnerExe%" ^
  -targetargs:"\"%DllContainingTests%\"" ^
- -filter:"+[*]* -[nunit.framework*]* -[FseProjectManagement.DataAccessLayer*]* -[FseProjectManagement.Shared*]* -[FseProjectManagement.Web.Extensions.Models*]* -[*.Tests*]* -[*]*.*Config" ^
+ -filter:"+[*]* -[nunit.framework*]* -[*.DataAccessLayer*]* -[*.Shared*]* -[*.Models*]* -[*.Tests*]* -[*]*.*Config" ^
  -mergebyhash ^
  -skipautoprops ^
  -register:user ^

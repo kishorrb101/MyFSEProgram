@@ -45,8 +45,8 @@ C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.E
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\System.Net.Http.Formatting.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\System.Web.Http.WebHost.xml
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\bin\Debug\EntityFramework.xml
-C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\obj\Debug\FseProjectManagement.Web.Extensions.dll
-C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\obj\Debug\FseProjectManagement.Web.Extensions.pdb
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\obj\Debug\FseProjectManagement.Web.Extensions.csprojAssemblyReference.cache
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\obj\Debug\FseProjectManagement.Web.Extensions.csproj.CoreCompileInputs.cache
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\obj\Debug\FseProjectManagement.Web.Extensions.csproj.CopyComplete
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\obj\Debug\FseProjectManagement.Web.Extensions.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web.Extensions\obj\Debug\FseProjectManagement.Web.Extensions.pdb

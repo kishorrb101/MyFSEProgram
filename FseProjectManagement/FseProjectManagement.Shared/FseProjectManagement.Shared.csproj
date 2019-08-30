@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="Enums.cs" />
     <Compile Include="Helper\Extensions.cs" />
-    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\ParentTaskDetails.cs" />
     <Compile Include="Models\ProjectDetails.cs" />
     <Compile Include="Models\TaskDetails.cs" />

@@ -1,4 +1,5 @@
-﻿namespace FseProjectManagement.Shared.SearchFilters.FilterCriteria
+﻿using System;
+namespace FseProjectManagement.Shared.SearchFilters.FilterCriteria
 {
     public class FilterCriteria
     {

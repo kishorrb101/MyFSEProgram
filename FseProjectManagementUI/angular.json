@@ -28,9 +28,9 @@
               "src/web.config"
             ],
             "styles": [
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/rhea/theme.css",
-              "node_modules/primeng/resources/primeng.min.css",
+              "src/assets/primeicons/primeicons.css",
+              "src/assets/primeng/resources/themes/rhea/theme.css",
+              "src/assets/primeng/resources/primeng.min.css",
               "node_modules/quill/dist/quill.core.css",
               "node_modules/quill/dist/quill.snow.css",
               "src/app/core/preloader/preloader.scss",
@@ -120,9 +120,9 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/nova-colored/theme.css",
-              "node_modules/primeng/resources/primeng.min.css",
+              "src/assets/primeicons/primeicons.css",
+              "src/assets/primeng/resources/themes/nova-colored/theme.css",
+              "src/assets/primeng/resources/primeng.min.css",
               "node_modules/quill/dist/quill.core.css",
               "node_modules/quill/dist/quill.snow.css",
               "src/app/core/preloader/preloader.scss",

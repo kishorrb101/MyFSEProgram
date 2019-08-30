@@ -54,7 +54,6 @@
     <Compile Include="DataFeed\ProjectManagerInitializer.cs" />
     <Compile Include="DataFeed\Configuration.cs" />
     <Compile Include="FseProjectManagerDbContext.cs" />
-    <Compile Include="Helper\Class1.cs" />
     <Compile Include="Helper\ProjectFilterHelper.cs" />
     <Compile Include="Helper\TaskFilterHelper.cs" />
     <Compile Include="Helper\UserFilterHelper.cs" />
