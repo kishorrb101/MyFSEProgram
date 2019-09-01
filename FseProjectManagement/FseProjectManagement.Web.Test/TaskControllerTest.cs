@@ -76,6 +76,7 @@ namespace FseProjectManagement.Web.Test
             Assert.AreEqual(testProjects.Count(), result.Content.Total);
         }
 
+
         [Test]
         [PerfBenchmark(NumberOfIterations = 500, RunMode = RunMode.Throughput,
             TestMode = TestMode.Test, SkipWarmups = true, RunTimeMilliseconds = 6000)]
