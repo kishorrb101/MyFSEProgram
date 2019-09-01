@@ -101,6 +101,7 @@ namespace FseProjectManagement.Web.Test
             Assert.IsNull(result.Content);
         }
 
+
         [Test]
         [PerfBenchmark(NumberOfIterations = 500, RunMode = RunMode.Throughput,
             TestMode = TestMode.Test, SkipWarmups = true, RunTimeMilliseconds = 6000)]
