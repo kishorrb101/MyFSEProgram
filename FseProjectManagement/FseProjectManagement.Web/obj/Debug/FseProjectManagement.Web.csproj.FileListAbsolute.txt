@@ -136,6 +136,7 @@ C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\b
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\Newtonsoft.Json.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\nunit.framework.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\Serilog.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\Swashbuckle.Core.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Net.Http.Formatting.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Cors.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.Helpers.dll
@@ -148,6 +149,7 @@ C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\b
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.WebPages.Deployment.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.WebPages.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\System.Web.WebPages.Razor.dll
+C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\WebActivatorEx.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\WebGrease.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\EntityFramework.dll
 C:\Project\fse\Source\Latest\Git\FseProjectManagement\FseProjectManagement.Web\bin\FseProjectManagement.DataAccessLayer.pdb
